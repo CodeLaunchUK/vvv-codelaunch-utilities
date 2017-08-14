@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+noroot() {
+  sudo -EH -u "vagrant" "$@";
+}
+
 # WP-CLI dot env package command
 dotenv_package=$(noroot wp package list | grep 'aaemnnosttv/wp-cli-dotenv-command')
 if [ "$dotenv_package" != '' ]; then
