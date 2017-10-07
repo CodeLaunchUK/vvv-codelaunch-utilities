@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Check and install MkDocs if not installes
-if [ ! $(mkdocs --version | grep version ) ]; then
+if [[ ! $(mkdocs --version | grep version ) ]]; then
 	echo -e "\nInstalling MkDocs"
 	pip install mkdocs
 else
