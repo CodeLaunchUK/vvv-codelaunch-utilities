@@ -3,7 +3,8 @@
 
 # Rubygems update
 if [ $(gem -v|grep '^2.') ]; then
-	echo "gem installed"
+    echo "gem installed, updating..."
+    gem update wordmove
 else
 	apt-get install -y ruby-dev
 	echo "ruby-dev installed"
